@@ -24,6 +24,43 @@ flowchart TD
 
     DataStore[(ConcurrentHashMap)]
 ```
+## Domain Model
+
+```mermaid
+classDiagram
+    Room "1" --> "*" Sensor : contains via sensorIds
+    Sensor "1" --> "*" SensorReading : has many
+
+    class Room {
+        +String id
+        +String name
+        +int capacity
+        +List~String~ sensorIds
+    }
+
+    class Sensor {
+        +String id
+        +String type
+        +SensorStatus status
+        +double currentValue
+        +String roomId
+    }
+
+    class SensorReading {
+        +String id
+        +long timestamp
+        +double value
+    }
+
+    class SensorStatus {
+        <<enumeration>>
+        ACTIVE
+        MAINTENANCE
+        OFFLINE
+    }
+
+    Sensor --> SensorStatus : has status
+```
 
 ### Main Resources
 
