@@ -287,7 +287,7 @@ curl -X DELETE http://localhost:8080/api/v1/rooms/room-a101
 ## Part 2: Room Management
 
 
-* Q1. When returning a list of rooms, what are the implications of returning only IDs versus returning the full room objects? Consider network bandwidth and client side processing.*
+ Q1. When returning a list of rooms, what are the implications of returning only IDs versus returning the full room objects? Consider network bandwidth and client side processing.
         
         If we only return an array of Room IDs, the response size is very small, which saves bandwidth. However, it creates a big problem for the client because they will have to make many extra API calls to get the actual details (like name and capacity) for each room.
 By returning the full room objects, the initial response is slightly larger, but the client gets all the necessary information in just one single network request. For a system like a Smart Campus, this approach is much better because it reduces network delays and makes the frontend application much faster and easier to build.
