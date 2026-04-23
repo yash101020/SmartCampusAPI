@@ -10,6 +10,20 @@ Production-style RESTful API coursework project built with JAX-RS (Jersey), Griz
 - Runtime: Jersey + Grizzly HTTP server
 - Error handling: custom exception mappers + a global fallback mapper
 - Observability: request and response logging via JAX-RS filters
+## System Architecture
+
+```mermaid
+flowchart TD
+    Client-->|HTTP Request|Grizzly
+    Grizzly-->|Routes|Filter
+    Filter-->|Logs|Resources
+    Resources-->|Reads/Writes|DataStore
+    Resources-->|Error|ExceptionMapper
+    ExceptionMapper-->|JSON Error|Client
+    Resources-->|JSON Response|Client
+
+    DataStore[(ConcurrentHashMap)]
+```
 
 ### Main Resources
 
