@@ -164,6 +164,9 @@ java -jar target/smart-campus-sensor-room-management-api-1.0.0.jar
 
 ## Example cURL Commands
 
+### Discovery endpoint
+curl  http://localhost:8080/api/v1/
+
 ### 1. Create Room
 
 ```bash
@@ -248,6 +251,20 @@ curl -X DELETE http://localhost:8080/api/v1/rooms/room-a101
   "status": 409
 }
 ```
+## API Endpoints Summary
+
+| Category | Method | Endpoint | Description | Status Codes |
+|----------|--------|----------|-------------|--------------|
+| Rooms | GET | /api/v1/rooms | List all rooms | 200 OK |
+| | POST | /api/v1/rooms | Create a new room | 201 Created, 400, 409 |
+| | GET | /api/v1/rooms/{roomId} | Get a specific room | 200 OK, 404 |
+| | DELETE | /api/v1/rooms/{roomId} | Delete a room | 204, 404, 409 |
+| Sensors | GET | /api/v1/sensors | List all sensors | 200 OK |
+| | POST | /api/v1/sensors | Create a new sensor | 201 Created, 400, 422 |
+| | GET | /api/v1/sensors/{sensorId} | Get a specific sensor | 200 OK, 404 |
+| | GET | /api/v1/sensors?type={t} | Filter sensors by type | 200 OK |
+| Readings | GET | /api/v1/sensors/{sensorId}/readings | Get all readings | 200 OK, 404 |
+| | POST | /api/v1/sensors/{sensorId}/readings | Add a reading | 201 Created, 403, 404 |
 
 ## Coursework Theory Answers
 
