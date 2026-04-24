@@ -1,6 +1,9 @@
+Name : W.A.Y.G.Kalpage
+StudentID : 20241289
+ClientServerArchitecture SmartCampus API coursework 
 # Smart Campus Sensor & Room Management API
 
-Production-style RESTful API coursework project built with JAX-RS (Jersey), Grizzly, Maven, and thread-safe in-memory storage.
+Welcome to the Smart Campus API! This project is a robust RESTful service developed using Java and JAX-RS that acts as the core backend infrastructure for managing campus rooms and tracking real-time sensor data. The system is entirely self-contained, featuring a custom thread-safe in-memory data store to handle multiple client requests efficiently and securely.
 
 ## API Overview
 
