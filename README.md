@@ -2,7 +2,7 @@ Name : W.A.Y.G.Kalpage
 StudentID : 20241289
 ClientServerArchitecture SmartCampus API coursework 
 ## API Demonstration Video
-▶️ [Click here to watch the Postman API Demonstration]([[(https://youtu.be/0gLQZzvra5I?si=lEJavt1_zxRqHCzE)])
+▶️ [Click here to watch the Postman API Demonstration]([(https://youtu.be/0gLQZzvra5I?si=lEJavt1_zxRqHCzE)])
 # Smart Campus Sensor & Room Management API
 
 Welcome to the Smart Campus API! This project is a robust RESTful service developed using Java and JAX-RS that acts as the core backend infrastructure for managing campus rooms and tracking real-time sensor data. The system is entirely self-contained, featuring a custom thread-safe in-memory data store to handle multiple client requests efficiently and securely.
